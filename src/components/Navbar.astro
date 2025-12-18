@@ -1,0 +1,127 @@
+---
+const links = [
+    { name: "Inicio", href: "/" },
+    // { name: "Nosotros", href: "/nosotros" },
+    { name: "Filosofía", href: "/filosofia" },
+    { name: "Servicios", href: "/servicios" },
+    { name: "Contacto", href: "/contacto" },
+];
+
+const pathname = Astro.url.pathname;
+const isActive = (href) => {
+    if (href === "/") {
+        return pathname === "/";
+    }
+    // Remove trailing slash for comparison if present
+    const normalizedPath =
+        pathname.endsWith("/") && pathname.length > 1
+            ? pathname.slice(0, -1)
+            : pathname;
+    return normalizedPath.startsWith(href);
+};
+---
+
+<nav
+    class="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-indigo-500/10"
+>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a
+                    href="/"
+                    class="text-2xl font-bold tracking-tighter text-white hover:text-indigo-400 transition-colors"
+                >
+                    DEVINCI
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "text-sm font-medium transition-all duration-300 relative py-1",
+                                isActive(link.href)
+                                    ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-indigo-500 after:rounded-full after:shadow-[0_0_10px_rgba(99,102,241,0.5)]"
+                                    : "text-slate-400 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500/50 after:transition-all after:duration-300 hover:after:w-full",
+                            ]}
+                        >
+                            {link.name}
+                        </a>
+                    ))
+                }
+                <a
+                    href="/contacto"
+                    class="px-5 py-2.5 rounded-lg bg-white text-slate-900 text-sm font-bold hover:bg-slate-200 transition-all shadow-lg shadow-white/5 hover:-translate-y-0.5"
+                >
+                    Iniciar Proyecto
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button
+                    type="button"
+                    class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Abrir menú principal</span>
+                    <!-- Icon menu -->
+                    <svg
+                        class="block h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+        class="md:hidden hidden bg-slate-900 border-b border-indigo-500/10"
+        id="mobile-menu"
+    >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {
+                links.map((link) => (
+                    <a
+                        href={link.href}
+                        class:list={[
+                            "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                            isActive(link.href)
+                                ? "bg-slate-800 text-white border-l-2 border-indigo-500"
+                                : "text-slate-400 hover:text-white hover:bg-slate-800",
+                        ]}
+                    >
+                        {link.name}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</nav>
+
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector("#mobile-menu");
+
+    if (btn && menu) {
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    }
+</script>

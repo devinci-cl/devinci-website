@@ -1,0 +1,58 @@
+import { c as createComponent, h as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_BlOi4qeq.mjs';
+import 'piccolore';
+import { $ as $$Layout } from '../chunks/Layout_IIImvxUO.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Astro = createAstro();
+const $$Nosotros = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Nosotros;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Nosotros | Devinci" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="relative py-32 overflow-hidden bg-slate-900 min-h-screen"> <!-- Background Accents --> <div class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] mix-blend-screen opacity-30"></div> <div class="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[100px] mix-blend-screen opacity-20"></div> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"> <!-- Hero --> <div class="text-center mb-24 max-w-4xl mx-auto"> <span class="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-6 block animate-fade-in">El Equipo</span> <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
+Ingeniería + <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Arte</span> </h1> <p class="text-xl text-slate-400 leading-relaxed font-light">
+Somos un colectivo de arquitectos de software, ingenieros y
+                    diseñadores obsesionados con la excelencia.
+<strong class="text-slate-200 font-medium">No hacemos sitios web, construimos plataformas
+                        digitales.</strong> </p> </div> <!-- Content Grid --> <div class="grid lg:grid-cols-2 gap-16 items-start mb-32"> <!-- Image / Abstract Visual --> <div class="relative group"> <div class="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-violet-600 rounded-3xl -rotate-2 opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div> <div class="relative bg-slate-800/50 border border-slate-700 rounded-3xl overflow-hidden backdrop-blur-sm aspect-[4/3] flex items-center justify-center"> <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"></div> <!-- Abstract representation of code/structure --> <div class="grid grid-cols-6 gap-2 opacity-20 rotate-12 scale-150"> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> <div class="w-16 h-16 bg-transparent rounded-lg border border-slate-400"></div> <div class="w-16 h-16 bg-slate-400 rounded-lg"></div> </div> </div> </div> <!-- History & Manifesto --> <div class="space-y-10"> <div> <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3"> <span class="w-8 h-1 bg-indigo-500 rounded-full"></span>
+Nuestra Historia
+</h2> <div class="space-y-6 text-lg text-slate-300 leading-relaxed"> <p>
+Nacimos de una frustración común: ver grandes
+                                ideas morir por una ejecución técnica
+                                deficiente.
+</p> <p>
+Devinci surgió para cerrar la brecha entre las <span class="text-indigo-400 font-medium">consultoras corporativas</span> (rígidas y lentas) y las <span class="text-violet-400 font-medium">agencias creativas</span> (visualmente atractivas pero técnicamente superficiales).
+</p> <p>
+Combinamos el rigor de la ingeniería de sistemas
+                                crítica con la agilidad y estética del diseño
+                                moderno.
+</p> </div> </div> </div> </div> <!-- Tech Stack --> <div class="bg-gradient-to-b from-slate-800/40 to-slate-900/40 border border-slate-700/50 rounded-3xl p-12 backdrop-blur-md relative overflow-hidden"> <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div> <h2 class="text-3xl font-bold text-white mb-12 text-center">
+Nuestro Arsenal Tecnológico
+</h2> <div class="grid grid-cols-2 md:grid-cols-4 gap-8"> <!-- Tech Item 1 --> <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-700/50 transition-all duration-300 group text-center"> <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 scale-100 group-hover:scale-110">
+⚛️
+</div> <h3 class="text-white font-bold mb-1">Frontend</h3> <p class="text-sm text-slate-400">
+React, Next.js, Tailwind
+</p> </div> <!-- Tech Item 2 --> <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-700/50 transition-all duration-300 group text-center"> <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 scale-100 group-hover:scale-110">
+🚀
+</div> <h3 class="text-white font-bold mb-1">Performance</h3> <p class="text-sm text-slate-400">Astro, Vite, Edge</p> </div> <!-- Tech Item 3 --> <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-700/50 transition-all duration-300 group text-center"> <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 scale-100 group-hover:scale-110">
+☁️
+</div> <h3 class="text-white font-bold mb-1">Cloud</h3> <p class="text-sm text-slate-400">
+AWS, Vercel, Docker
+</p> </div> <!-- Tech Item 4 --> <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-700/50 transition-all duration-300 group text-center"> <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 scale-100 group-hover:scale-110">
+🛡️
+</div> <h3 class="text-white font-bold mb-1">Backend</h3> <p class="text-sm text-slate-400">
+Node, PostgreSQL, Redis
+</p> </div> </div> </div> </div> </section> ` })}`;
+}, "/Users/estebanloaiza/Documents/projects/devinci/devinci/website/src/pages/nosotros.astro", void 0);
+
+const $$file = "/Users/estebanloaiza/Documents/projects/devinci/devinci/website/src/pages/nosotros.astro";
+const $$url = "/nosotros";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$Nosotros,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
