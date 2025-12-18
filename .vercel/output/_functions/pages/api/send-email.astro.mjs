@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 export { renderers } from '../../renderers.mjs';
 
-const resend = new Resend("re_123");
+const resend = new Resend("re_XyBwGA8e_6ZL1oD2BrAD1sFuGKeZLeJDd");
 const POST = async ({ request }) => {
   try {
     const data = await request.json();
@@ -13,7 +13,7 @@ const POST = async ({ request }) => {
       );
     }
     const { data: emailData, error } = await resend.emails.send({
-      from: "Devinci Website <onboarding@resend.dev>",
+      from: "Solicitud de Contacto <contacto@send.devinci.cl>",
       to: ["contacto@devinci.cl"],
       replyTo: email,
       subject: `Nuevo Contacto: ${name} ${lastname || ""}`,
